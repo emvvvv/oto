@@ -2,7 +2,23 @@
   <body>
     <h1>Slope of a Line</h1>
     <form>
-      x1: <input>
+      x1: <input id="x1">
+      x2: <input id="x2">
+      y1: <input id="y1">
+      y2: <input id="y2">
+      <button onclick="slope()">Calculate</button>
      </form>
+    <script>
+      function slope(){
+        var x1 = document.getElementById("x1").value;
+        var x2 = document.getElementById("x2").value;
+        var y1 = document.getElementById("y1").value;
+        var y2 = document.getElementById("y2").value;
+        var x = x2 - x1;
+        var y = y2 - y1;
+        var slope = y / x;
+        window.alert("The slope is: " + slope);
+       } 
+    </script>
    </body>
   </html>
